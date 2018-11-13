@@ -1,0 +1,295 @@
+/*! Pushy - v1.1.0 - 2017-1-30
+* Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+* https://github.com/christophery/pushy/
+* by Christopher Yee */
+/* Menu Appearance */
+.pushy, .pushy1 {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    z-index: 9999;
+    padding: 50px 40px 40px;
+    background: #fff;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    /* enables momentum scrolling in iOS overflow elements */
+}
+
+.menu-btn, .menu-btn1, .menu-btn2 {
+   cursor: pointer;
+
+    display: block;
+    //padding: 5px 15px 5px 15px;
+background-color: #27366d;
+    padding: 12px 15px 12px 15px;
+    border: 1px solid #122154;
+    z-index: 99;
+
+    transform: rotate(90deg);
+
+    text-align: center;
+    /*margin-left: -43px;*/
+}
+
+.pushy-open-left .menu-btncont p, .pushy-open-left1 .menu-btncont p {
+    display: none;
+}
+
+#widget-container {
+    /*left: 0;*/
+    right: 0;
+    padding: 0;
+    position: fixed;
+    top: 171px;
+    z-index: 999;
+    /*margin-left: -37px;*/
+    //margin-right: -37px;
+	margin-right: -59px;
+    color: #ffffff;
+}
+
+#widget-container a {
+    color: #ffffff;
+}
+
+.menu-btn1, .menu-btn {
+    margin-top: 69%;
+}
+
+.menu-btncont.tel {
+    margin-top: 34%;
+}
+
+.menu-btncont, .ion-forms-toggler {
+        cursor: pointer;
+    display: block;
+    width: 44px;
+    border-top: 1px solid #122154;
+    z-index: 99;
+    background: #27366d none repeat scroll 0 0;
+    cursor: pointer;
+    position: relative;
+    padding-top: 0px;
+    padding: 2px 5px 1px 5px;
+        margin-left: 58px;
+    margin-top: 58px;
+}
+
+.menu-btncont:hover p {
+    /*left: 33px;*/
+    right: 33px;
+}
+
+.telephone, .mail {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.mail:before {
+    content: url(https://www.besthairtransplanthyd.com/wp-content/uploads/2018/04/email-1.png);
+    color: white;
+}
+
+.telephone:before {
+    content: url(https://www.besthairtransplanthyd.com/wp-content/uploads/2018/04/phone-3.png);
+    color: white;
+}
+
+.menu-btncont:hover a {
+    color: #fff;
+}
+
+.menu-btncont p {
+    background: #27366d none repeat scroll 0 0;
+    color: #fff;
+    float: left;
+    font-size: 13px;
+    /*left: -260px;
+    right: -260px;*/
+	 right: -312px;
+    line-height: 24px;
+    margin-bottom: 0;
+    padding: 6px 0 6px 10px;
+    position: absolute;
+    top: 0;
+    transition: all 300ms ease-in-out 0s;
+    //width: 250px;
+	 width: 312px;
+}
+
+.pushy a, .pushy1 a {
+  display: block;
+  color: #b3b3b1;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+.pushy a:hover, .pushy1 a:hover {
+  color: #FFF;
+}
+
+.pushy.pushy-left, .pushy1.pushy-left1 {
+  left: 0;
+}
+
+.pushy.pushy-right, .pushy1.pushy-right1 {
+  right: 0;
+}
+
+.pushy-content, .pushy-content1 {
+  visibility: hidden;
+}
+
+/* Menu Movement */
+.pushy-left, .pushy-left1 {
+  -webkit-transform: translate3d(calc(100vw + 300px), 0, 0);
+  -ms-transform: translate3d(calc(100vw + 300px), 0, 0);
+  transform: translate3d(calc(100vw + 300px), 0, 0);
+}
+
+.pushy-open-left #widget-container, .pushy-open-left1 #widget-container,
+.pushy-open-left .push, .pushy-open-left1 .push1 {
+  /*-webkit-transform: translate3d(calc(100vw - 300px), 0, 0);
+  -ms-transform: translate3d(calc(100vw - 300px), 0, 0);
+  transform: translate3d(calc(100vw - 300px), 0, 0);
+-webkit-transform: translate3d(-300px, 0, 0);
+ -ms-transform: translate3d(-300px, 0, 0);
+ transform: translate3d(-300px, 0, 0);*/
+ -webkit-transform: translate3d(-283px, 0, 0);
+ -ms-transform: translate3d(-283px, 0, 0);
+ transform: translate3d(-283px, 0, 0);
+}
+
+.pushy-right, .pushy-right1 {
+  -webkit-transform: translate3d(calc(100vw - 300px), 0, 0);
+  -ms-transform: translate3d(calc(100vw - 300px), 0, 0);
+  transform: translate3d(calc(100vw - 300px), 0, 0);
+}
+
+.pushy-open-right #widget-container, .pushy-open-right1 #widget-container,
+.pushy-open-right .push, .pushy-open-right1 .push1 {
+  -webkit-transform: translate3d(calc(100vw + 300px), 0, 0);
+  -ms-transform: translate3d(calc(100vw + 300px), 0, 0);
+  transform: translate3d(calc(100vw + 300px), 0, 0);
+}
+
+.pushy-open-left .pushy, .pushy-open-left1 .pushy1,
+.pushy-open-right .pushy, .pushy-open-right1 .pushy1 {
+  -webkit-transform: translate3d(calc(100vw - 300px), 0, 0);
+  -ms-transform: translate3d(calc(100vw - 300px), 0, 0);
+  transform: translate3d(calc(100vw - 300px), 0, 0);
+  z-index: 99999;
+  margin-top: 30px
+}
+
+.pushy-open-left .pushy-content, .pushy-open-left1 .pushy-content1,
+.pushy-open-right .pushy-content, .pushy-open-right1 .pushy-content1 {
+  visibility: visible;
+}
+
+/* Menu Transitions */
+#widget-container,
+.pushy, .pushy1,
+.push, .push1 {
+  transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+.pushy-content, .pushy-content1 {
+  transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+/* Site Overlay */
+.site-overlay, .site-overlay1 {
+  display: none;
+}
+
+.pushy-open-left .site-overlay, .pushy-open-left1 .site-overlay1,
+.pushy-open-right .site-overlay, .pushy-open-right1 .site-overlay1 {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-animation: fade 500ms;
+  animation: fade 500ms;
+}
+
+.ion-sd-forms {
+    margin: 0 auto;
+}
+
+.ion-query-submit, .ion-upd-submit {
+    text-align: center;
+}
+
+input[type="submit"] {
+    margin-top: 1em;
+}
+
+nav.pushy h2, nav.pushy1 h2 {
+    color: #000000;
+}
+
+.ion-sd-forms input[type="number"]:focus,
+.ion-sd-forms input[type="text"]:focus,
+.ion-sd-forms input[type="tel"]:focus,
+.ion-sd-forms input[type="email"]:focus,
+.ion-sd-forms textarea:focus {
+    border-color: #038387 #bbb #bbb #bbb !important;
+    border-style: solid !important;
+    border-width: 3px 1px 1px 1px !important;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ion-sd-wrapper.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ion-sd-wrapper {
+  display: block;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.ion-forms-toggler {
+  color: #ffffff;
+  top: -37px;
+  text-align: center;
+}
+.status-message {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.ion-sd-query-err-catg,
+.ion-sd-query-err-name,
+.ion-sd-query-err-email,
+.ion-sd-query-err-mob {
+    color: red;
+    font-size: 14px;
+}
